@@ -35,8 +35,9 @@ type rateLimitOptions = { maxRequests?: number, perMilliseconds?: number, maxRPS
   *
   * @param {Object} axios axios instance
   * @param {Object} options options for rate limit, available for live update
-  * @param {Number} options.maxRequests max requests to perform concurrently in given amount of time.
-  * @param {Number} options.perMilliseconds amount of time to limit concurrent requests.
+  * @param {Number} [options.maxRequests] max requests to perform concurrently in given amount of time.
+  * @param {Number} [options.perMilliseconds] amount of time to limit concurrent requests.
+ * @param {Number} [options.maxRPS] maxRPS is a shorthand for perMilliseconds: 1000, and it takes precedence
   * @returns {Object} axios instance with interceptors added
   */
 export default function axiosRateLimit(
