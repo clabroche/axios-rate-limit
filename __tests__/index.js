@@ -1,4 +1,4 @@
-var axios = require('axios')
+var axios = require('axios').default
 var sinon = require('sinon')
 
 var axiosRateLimit = require('../src/index')
@@ -89,7 +89,6 @@ it('support dynamic options', async function () {
     requests.push(http.get('/users').then(onSuccess))
   }
   await delay(190)
-  end = Date.now()
   expect(onSuccess.callCount).toEqual(3)
 
   await Promise.all(requests)
@@ -109,7 +108,6 @@ it('support dynamic options', async function () {
     requests.push(http.get('/users').then(onSuccess))
   }
   await delay(990)
-  end = Date.now()
   expect(onSuccess.callCount).toEqual(3)
 
   await Promise.all(requests)

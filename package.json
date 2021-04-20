@@ -13,6 +13,7 @@
   "homepage": "https://github.com/aishek/axios-rate-limit#readme",
   "devDependencies": {
     "@logux/eslint-config": "^28.1.0",
+    "@types/jest": "^26.0.22",
     "axios": "^0.18.0",
     "eslint": "^5.16.0",
     "eslint-ci": "^1.0.0",
