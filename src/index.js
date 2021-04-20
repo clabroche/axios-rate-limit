@@ -135,3 +135,4 @@ function axiosRateLimit (axios, options) {
 }
 
 module.exports = axiosRateLimit
+module.exports.default = axiosRateLimit
